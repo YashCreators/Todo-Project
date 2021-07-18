@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(to right, #00ffff, #FFFF00, #7fff00);
+    color: black;
+    min-height: 100vh;
+}
+
+header{
+    font-size: 1.5rem;
+}
+
+header, form{
+    min-height: 15vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+form input ,form button {
+    padding: 1rem;
+    font-size:1rem;
+    border: none;
+    background: white;
+}
+
+
+form button{
+    cursor: pointer;
+    color:  #000000;
+    transition: all 0.5s ease;
+}
+form button:hover{
+    background-color: #1eff00;
+}
+
+form, todo-container{
+    font-size: 0.5rem;
+    padding: 1rem;
+    min-width: 30%;
+}
+
+.todo-cointainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.todo-list{
+    min-width: 20%;
+    list-style: none;
+}
+
+.todo{
+    margin: 1rem;
+    background: white;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    transition: all 0.8s ease;
+}
+
+.todo li
+{
+    flex: 1;
+}
+
+.remove-btn , .complete-btn{
+    background: #00ffdd;
+    border: none;
+    cursor: pointer;
+    padding: 0.4rem;
+    font-size: 1rem;
+
+}
+
+.complete-btn{
+    background-color: rgb(0, 255, 85);
+    color: #000000;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+.fall{
+    transform: translateZ(6rem) rotateZ(360deg);
+    opacity: 0.6;
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select{
+    color:#0099ff;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1.1rem;
+}
+
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    background: #00ffdd;
+    top: 0;
+    right: 0;
+    padding: 1.5rem;
+    pointer-events: none;
+}
+.select:hover::after{
+    background: white;
+    color:#00ffdd;
+}
